@@ -70,10 +70,10 @@
 ```
 askmyvideo/
 ├── app.py                  # Main Streamlit application file
+├── assets/
 ├── modules/
 │   ├── transcript.py       # Transcript extraction functionality
 │   ├── rag_pipeline.py     # RAG (Retrieval Augmented Generation) setup
-│   └── utils.py            # Helper functions
 ├── requirements.txt        # Project dependencies
 └── README.md               # Project documentation
 ```
