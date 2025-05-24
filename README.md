@@ -1,6 +1,11 @@
-# 🎥 AskMyVideo
+# 🎥 AskMyVideo - AI Video Analysis & Chat Tool
 
-Transform any YouTube video into an interactive AI conversation. This Streamlit application allows users to extract information from YouTube videos by asking questions in natural language.
+**Transform YouTube videos into interactive AI conversations | Ask questions, get insights, extract key information**
+
+[![Python](https://img.shields.io/badge/Python-3.11+-blue)](https://python.org)
+[![Ollama](https://img.shields.io/badge/Ollama-Mistral%207B-green)](https://ollama.ai)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-red)](https://streamlit.io)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 ![AskMyVideo Demo 1](assets/1.png)
 ![AskMyVideo Demo 2](assets/2.png)
