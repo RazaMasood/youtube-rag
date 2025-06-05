@@ -536,24 +536,10 @@ with st.sidebar:
     
     # Video loading form
     with st.form("video_form", clear_on_submit=False):
-        st.subheader("📹 Load YouTube Video")
-        video_url = st.text_input(
+        st.subheader("📹 Load YouTube Video")        video_url = st.text_input(
             "YouTube URL", 
             placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ",
             help="Paste any YouTube video URL here"
-        )
-        
-        # Language selection with better UX
-        languages = {
-            "en": "🇺🇸 English", "es": "🇪🇸 Spanish", "fr": "🇫🇷 French",
-            "de": "🇩🇪 German", "it": "🇮🇹 Italian", "pt": "🇧🇷 Portuguese",
-            "ru": "🇷🇺 Russian", "ja": "🇯🇵 Japanese", "ko": "🇰🇷 Korean", "zh": "🇨🇳 Chinese"
-        }
-        language_code = st.selectbox(
-            "Preferred Language", 
-            options=list(languages.keys()), 
-            format_func=lambda x: languages[x],
-            help="Choose the language for transcript extraction"
         )
         
         col1, col2 = st.columns(2)
@@ -571,9 +557,8 @@ with st.sidebar:
     if submitted and video_url and not st.session_state.processing:
         st.session_state.processing = True
         
-        with st.status("🔄 Processing video...", expanded=True) as status:
-            st.write("🎯 Extracting transcript...")
-            transcript, message = get_transcript_from_youtube(video_url, language_code)
+        with st.status("🔄 Processing video...", expanded=True) as status:            st.write("🎯 Extracting transcript...")
+            transcript, message = get_transcript_from_youtube(video_url)
             
             if transcript:
                 st.session_state.transcript = transcript
@@ -769,11 +754,10 @@ else:
         ### 🎯 Smart Analysis
         AI understands context and provides accurate answers about your video content.
         """)
-    
-    with col2:
+      with col2:
         st.markdown("""
-        ### 🌍 Multi-Language
-        Support for 10+ languages with automatic transcript extraction.
+        ### 🎯 Auto-Caption
+        Automatic transcript extraction from YouTube videos.
         """)
     
     with col3:
