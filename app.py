@@ -536,7 +536,8 @@ with st.sidebar:
     
     # Video loading form
     with st.form("video_form", clear_on_submit=False):
-        st.subheader("📹 Load YouTube Video")        video_url = st.text_input(
+        st.subheader("📹 Load YouTube Video")        
+        video_url = st.text_input(
             "YouTube URL", 
             placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ",
             help="Paste any YouTube video URL here"
