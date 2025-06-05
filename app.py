@@ -558,7 +558,8 @@ with st.sidebar:
     if submitted and video_url and not st.session_state.processing:
         st.session_state.processing = True
         
-        with st.status("🔄 Processing video...", expanded=True) as status:            st.write("🎯 Extracting transcript...")
+        with st.status("🔄 Processing video...", expanded=True) as status:
+            st.write("🎯 Extracting transcript...")
             transcript, message = get_transcript_from_youtube(video_url)
             
             if transcript:
@@ -755,12 +756,12 @@ else:
         ### 🎯 Smart Analysis
         AI understands context and provides accurate answers about your video content.
         """)
-      with col2:
+    with col2:
         st.markdown("""
         ### 🎯 Auto-Caption
         Automatic transcript extraction from YouTube videos.
         """)
-    
+
     with col3:
         st.markdown("""
         ### 📊 Export Results
