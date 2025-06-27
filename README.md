@@ -73,7 +73,7 @@ Project root/
 │   ├── transcript.py       # Transcript extraction functionality
 │   └── rag_pipeline.py     # RAG (Retrieval Augmented Generation) setup
 ├── requirements.txt        # Project dependencies
-├── README.md               # Project documentation
+└── README.md               # Project documentation
 ```
 
 ## 🛠️ Technologies Used
