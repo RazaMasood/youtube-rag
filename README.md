@@ -11,8 +11,6 @@ Transform any YouTube video into an interactive AI conversation. This Streamlit 
 - **YouTube Video Analysis**: Automatically extracts and processes transcripts from any YouTube video
 - **AI-Powered Q&A**: Ask questions about video content and get accurate, context-aware answers
 - **Interactive UI**: Clean, intuitive interface with real-time responses
-- **Export Functionality**: Save your conversations for later reference
-- **Suggested Questions**: Get started quickly with pre-defined question suggestions
 
 ## 🚀 Getting Started
 
@@ -39,16 +37,18 @@ Transform any YouTube video into an interactive AI conversation. This Streamlit 
 
 3. Run the application
    ```bash
+   python main.py
+   ```
+   ```bash
    streamlit run app.py
    ```
 
 ## 📋 How to Use
 
 1. **Load a Video**: Paste a YouTube URL in the sidebar input field
-2. **Process Video**: Click "Process Video" to extract and analyze the content
+2. **Process Video**: Click "Extract Transcript" to extract and analyze the content
 3. **Ask Questions**: Type your questions about the video in the main chat area
 4. **Review Answers**: Get AI-generated responses based on the video content
-5. **Export Conversation**: Download your Q&A session for future reference
 
 ## 🔍 How It Works
 
@@ -61,14 +61,19 @@ Transform any YouTube video into an interactive AI conversation. This Streamlit 
 ## 📁 Project Structure
 
 ```
-askmyvideo/
+Project root/
 ├── app.py                  # Main Streamlit application file
+├── main.py                 # API
+├── api.py                  
+│   ├── rag_api.py          # RAG API endpoints
+│   └── transcript_api.py   # Transcript API endpoints   
+├── assets/                 # Screenshots
+├── model/                  # pydentic model   
 ├── modules/
 │   ├── transcript.py       # Transcript extraction functionality
-│   ├── rag_pipeline.py     # RAG (Retrieval Augmented Generation) setup
-│   └── utils.py            # Helper functions
+│   └── rag_pipeline.py     # RAG (Retrieval Augmented Generation) setup
 ├── requirements.txt        # Project dependencies
-└── README.md               # Project documentation
+├── README.md               # Project documentation
 ```
 
 ## 🛠️ Technologies Used
@@ -79,6 +84,7 @@ askmyvideo/
 - **Mistral 7B**: Open-source LLM for natural language processing
 - **Nomic Embeddings**: For semantic text embeddings
 - **YouTube API**: For transcript extraction
+- **FastAPI**: For building API endpoints
 - **Vector Database**: For efficient semantic search
 
 ## 🤝 Contributing

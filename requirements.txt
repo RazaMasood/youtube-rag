@@ -15,3 +15,7 @@ faiss-cpu>=1.7.4
 
 # YouTube transcript extraction
 youtube-transcript-api>=0.6.0
+
+# FastAPI for API endpoints
+fastapi>=0.115.0
+
